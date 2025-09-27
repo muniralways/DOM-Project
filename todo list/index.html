@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Bootstrap Project</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="./assets/icons/bootstrap-icons.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  
+  
+
+
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- menu -->
+     <div class="col-md-2 sidebar">
+  <div class="card">
+    <div class="card-header">
+      <h1 class="fs-3">Menu</h1>
+    </div>
+    <div class="card-body">
+      <ul class="nav flex-column">
+
+        <li class="nav-item">
+          <a href="#home" data-bs-toggle="tab" class="nav-link d-flex align-items-center">
+            <i class="bi bi-house-door-fill me-2"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#timer" data-bs-toggle="tab" class="nav-link d-flex align-items-center">
+           <i class="bi bi-stopwatch me-2"></i> Timer
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#addMenu" class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse">
+            <span><i class="bi bi-plus-circle-fill me-2"></i> Add</span>
+            <i class="bi bi-chevron-down small"></i>
+          </a>
+          <div class="collapse" id="addMenu">
+            <ul class="nav flex-column ms-3  ">
+              <li class="nav-item"><a href="#addtaks" class="nav-link"  data-bs-toggle="tab">Add Task</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Add Note</a></li>
+              <li class="nav-item"><a href="#catagory" class="nav-link" data-bs-toggle="tab">Catagory</a></li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <!-- main content -->
+      <!-- content -->
+
+ <div class="col-md-10">
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="home">
+     
+   <div class="row">
+    <div class="col-md-4 text-center">
+     <div class="card">
+      <div class="card-body">
+      <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target ="#input_modal">Taks add</a>
+
+      </div>
+     </div>
+      </div>
+    <div class="col-md-4 text-center">
+     <div class="card">
+      <div class="card-body">
+      <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target ="#catagory_modal">Category</a>
+
+      </div>
+     </div>
+      </div>
+    <div class="col-md-4 text-center">
+     <div class="card">
+      <div class="card-body">
+      <a href="#timer" data-bs-toggle="tab" class="nav-link">Timer</a>
+
+      </div>
+     </div>
+      </div>
+  
+    
+     </div>
+    </div>
+    <div class="tab-pane fade" id="addtaks">
+      <h2>Add</h2>
+      <p>Add new items here.</p>
+    </div> 
+    <div class="tab-pane fade" id="catagory">
+      <div class="card mt-3">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <h1>Category List</h1>
+    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target ="#catagory_modal">Add</button>
+  </div>
+  <div class="card-body">
+    <table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Catagory Description</th>
+  
+      <th scope="col">Add Date</th>
+    </tr>
+  </thead>
+  <tbody id="show_category">
+   
+  </tbody>
+</table>
+  </div>
+</div>
+    </div> 
+    <div class="tab-pane fade mt-md-2" id="timer">
+     
+<div class="card">
+  <div class="card-header">
+    <h3 class="fs-4">Timer</h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="mb-3">
+          <label for="timer_taskInput" class="form-label">Todo Name</label>
+          <input type="text" class="form-control" id="timer_taskInput" placeholder="Task Name">
+        </div>
+        <div class="mb-3">
+          <select id="task_category" class="form-select">
+            <option value="">Select Category</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="position-relative" style="width: 150px; height: 150px;">
+          <svg class="progress-ring" width="150" height="150">
+            <circle class="progress-ring__circle" stroke="blue" stroke-width="8" fill="transparent" r="68" cx="75" cy="75"/>
+          </svg>
+          <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h1 id="timeDisplay" class="mb-0">00:00</h1>
+          </div>
+        </div>
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+          <button class="btn btn-primary" id="startBtn">Start</button>
+          <button class="btn btn-warning" id="pauseBtn">Pause</button>
+          <button class="btn btn-danger" id="resetBtn">Reset</button>
+          <button class="btn btn-secondary" id="saveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- taks time list -->
+<div class="card mt-3">
+  <div class="card-header">
+    <h1>Taks Name</h1>
+  </div>
+  <div class="card-body">
+    <table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Taks Name</th>
+      <th scope="col">Catagory</th>
+      <th scope="col">Work Time</th>
+      <th scope="col">Work Date</th>
+    </tr>
+  </thead>
+  <tbody id="show_time_taks">
+   
+  </tbody>
+</table>
+  </div>
+</div>
+
+
+
+    </div> 
+  </div>
+ </div>
+    </div>
+  </div>
+
+  <!-- modal -->
+
+  <!-- Task Modal -->
+<div class="modal fade" id="input_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="task_form">
+          <div class="mb-3">
+            <label for="task_name" class="form-label">Task Name</label>
+            <input type="text" class="form-control" id="task_name" name="task_name" required>
+          </div>
+          <div class="mb-3">
+            <label for="task_description" class="form-label">Task Description</label>
+            <textarea class="form-control" id="task_description" name="task_description" rows="3" required></textarea>
+          </div>
+       <div class="mb-3">
+          <select id="task_cate" class="form-select">
+            <option value="">Select Category</option>
+          </select>
+        </div>
+          <div class="mb-3">
+            <label for="task_date" class="form-label">Due Date</label>
+            <input type="date" class="form-control" id="task_date" name="due_date" required>
+          </div>
+       
+      </div>
+      <div class="modal-footer">
+        <button id="saveButton" type="submit" form="task_form" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div> 
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- Category Modal -->
+<div class="modal fade" id="catagory_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Category</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="category_form">
+          <div class="mb-3">
+            <label for="catagory_name" class="form-label">Category Name</label>
+            <input type="text" class="form-control" id="catagory_name" name="cata_name" required>
+          </div>
+          <div class="mb-3">
+            <label for="catagory_description" class="form-label">Category Description</label>
+            <textarea class="form-control" id="catagory_description" name="cata_description" rows="3" required></textarea>
+          </div>
+      
+      </div>
+      <div class="modal-footer">
+        <button id="cata_save" type="submit" form="category_form" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div> 
+     </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <!-- function JS -->
+  <script src="./assets/js/function.js"></script>
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- subscribe button -->
+<main>
+     <div>
+        <button id="show-dialog" class="subscribe primary-button">Subscribe to our Newsletter</button>
+    
+    
+    
+    </div>
+</main>
+
+   <!-- dialog -->
+
+
+   <dialog id="dialog"  class="subscribe-wrapper">
+    <div class="subscribe-header">
+    <h2>  Be the first to know when new content is available</h2>
+    <button id="close-dialog" class="dialog-close-btn">x</button>
+</div>
+
+<div class="subscribe-body">
+<p>
+          Sing up to receive tips and tricks on how to create online designs
+          that make people take action
+        </p>
+
+    <form id="subscribe-form" action="">
+        <input
+        placeholder="Your email address"
+        required
+        type="email"
+        name="email"
+        id="emailInput"
+    >
+    <input type="submit" value="Sign me up" class="primary-button">
+    </form>
+</div>
+   </dialog>
+
+   <script >
+
+
+       const showBtn = document.getElementById("show-dialog");
+const dialog = document.getElementById("dialog");
+const closeBtn = document.getElementById("close-dialog");
+
+
+showBtn.addEventListener("click", () =>{
+dialog.showModal()
+})
+
+closeBtn.addEventListener("click", () =>{
+    dialog.close()
+})
+   </script>
+
+</body>
+</html>

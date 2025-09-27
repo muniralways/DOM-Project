@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+   <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<div class="container p-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+     
+      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">  
+         <div id="msg"></div>
+        <form id="form_mariage" action="">
+          
+          <!-- Name -->
+          <div class="my-4">
+            <label class="form-label" for="name">Name</label>
+            <input id="name" name="name" class="form-control" type="text">
+          </div>
+
+          <!-- Age -->
+          <div class="my-4">
+            <label class="form-label" for="age">Age</label>
+            <input id="age" name="age" class="form-control" type="number">
+          </div>
+
+          <!-- Gender -->
+          <div class="my-4">
+            <label id="gender" class="form-label">Gender</label> <br>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="male" name="gender" value="male">
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <!-- bootstrap js -->
+     
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="function.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

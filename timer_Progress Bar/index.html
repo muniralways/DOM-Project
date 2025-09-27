@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Bootstrap Project</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="./assets/icons/bootstrap-icons.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  
+  
+
+<!--  Your content goes here -->
+
+
+<div class="container my-5">
+  <div class="d-flex justify-content-center  mb-2">
+    <a href="#" id="start" style="margin-right:6px" class="btn btn-primary">Start</a>
+    <a href="#" id="stop" class="btn btn-danger">Stop</a>
+  </div>
+
+
+  <label for="" class="form-label">Input Time</label>
+  <input id="input_time" type="number" class="form-control mt-2">
+  <div class="progress mt-2" style="height: 35px;">
+    <div id="output_width" class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+         role="progressbar" style="width: 0%">
+      0
+    </div>
+  </div>
+  <p class="text-center mt-3 fs-5">⏱ Current Value: <span id="output_val">0</span></p>
+</div>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

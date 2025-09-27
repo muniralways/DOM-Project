@@ -1,0 +1,60 @@
+.container{
+    width: 90%;
+    margin: auto;
+}
+.title{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: crimson;
+    border-radius: 4px;
+}
+
+.action_area{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+}
+
+#num{
+    padding: 10px;
+    font-size: 18px;
+    border-width: 2px;
+}
+#num:focus{
+border-color: antiquewhite;
+border-width: 5px;
+
+}
+
+#generate{
+    padding: 10px;
+    margin-left: 5px;
+    border: none;
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+#generate:active{
+    transform: scale(.3);
+    transition: 1s;
+}
+
+.root{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: wrap;
+     
+}
+
+.root div{
+    box-shadow: 0 1px 1px #333;
+    padding: 30px;
+    font-size: 1em;
+    border-radius: 4px;
+    margin: 8px 0;
+}

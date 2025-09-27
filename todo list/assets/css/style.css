@@ -1,0 +1,31 @@
+   
+
+
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* timer*/
+
+.timer-container {
+    
+   
+    background: #f0f0f0;
+    position: relative;
+}
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.timer-text h1 {
+    font-size: 80px;
+    color: #333;
+}
+
